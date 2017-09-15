@@ -1,0 +1,232 @@
+{
+	"id": "454f1295-3554-69a9-53bd-7b706ce723e5",
+	"name": "SpringBootBook",
+	"description": "",
+	"order": [
+		"ed153418-f99c-8d79-4f7b-1ca5946f889c",
+		"88f17e49-feab-5208-241c-38cb7af241a0",
+		"b8e638bd-f84d-5146-07d4-3a28c8c4b218",
+		"b3853a18-bcd3-ed26-8eb9-3c6fcf3031e3",
+		"b852df8f-29d8-0434-42fa-6b327414a537",
+		"e479db32-3e95-ec37-02d9-d4deaa1cb98d"
+	],
+	"folders": [],
+	"timestamp": 1484082186701,
+	"owner": 0,
+	"public": false,
+	"hasRequests": true,
+	"requests": [
+		{
+			"id": "88f17e49-feab-5208-241c-38cb7af241a0",
+			"headers": "Authorization: Basic YWRtaW46bXlwYXNzd29yZA==\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Basic YWRtaW46bXlwYXNzd29yZA==",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8080/comments/product4711",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1505466357951,
+			"name": "Get Comments for Page",
+			"description": "",
+			"collectionId": "454f1295-3554-69a9-53bd-7b706ce723e5",
+			"responses": []
+		},
+		{
+			"id": "b3853a18-bcd3-ed26-8eb9-3c6fcf3031e3",
+			"headers": "Authorization: Basic YWRtaW46bXlwYXNzd29yZA==\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Basic YWRtaW46bXlwYXNzd29yZA==",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8080/comment/c3c5899e-ff63-4f78-9dcb-563dab135d36",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "DELETE",
+			"data": null,
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1505466453016,
+			"name": "Delete Comment",
+			"description": "",
+			"collectionId": "454f1295-3554-69a9-53bd-7b706ce723e5",
+			"responses": []
+		},
+		{
+			"id": "b852df8f-29d8-0434-42fa-6b327414a537",
+			"headers": "Authorization: Basic YWRtaW46bXlwYXNzd29yZA==\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Basic YWRtaW46bXlwYXNzd29yZA==",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8080/application/loggers",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1505466684806,
+			"name": "Show Loggers",
+			"description": "",
+			"collectionId": "454f1295-3554-69a9-53bd-7b706ce723e5",
+			"responses": []
+		},
+		{
+			"id": "b8e638bd-f84d-5146-07d4-3a28c8c4b218",
+			"headers": "Authorization: Basic YWRtaW46bXlwYXNzd29yZA==\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Basic YWRtaW46bXlwYXNzd29yZA==",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8080/comments/product4711/spam",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1505466439639,
+			"name": "Get Spam Comments for Page",
+			"description": "",
+			"collectionId": "454f1295-3554-69a9-53bd-7b706ce723e5",
+			"responses": []
+		},
+		{
+			"id": "e479db32-3e95-ec37-02d9-d4deaa1cb98d",
+			"headers": "Authorization: Basic YWRtaW46bXlwYXNzd29yZA==\nContent-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Basic YWRtaW46bXlwYXNzd29yZA==",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8080/application/loggers/ROOT",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1505466703665,
+			"name": "Change Loglevel",
+			"description": "",
+			"collectionId": "454f1295-3554-69a9-53bd-7b706ce723e5",
+			"responses": [],
+			"rawModeData": "{\n    \"configuredLevel\": \"DEBUG\"\n}"
+		},
+		{
+			"id": "ed153418-f99c-8d79-4f7b-1ca5946f889c",
+			"headers": "Content-Type: application/x-www-form-urlencoded\nAuthorization: Basic YWRtaW46bXlwYXNzd29yZA==\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/x-www-form-urlencoded",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Authorization",
+					"value": "Basic YWRtaW46bXlwYXNzd29yZA==",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8080/comments",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [
+				{
+					"key": "pageId",
+					"value": "product4711",
+					"type": "text",
+					"enabled": true,
+					"description": ""
+				},
+				{
+					"key": "username",
+					"value": "Stiefel",
+					"type": "text",
+					"enabled": true,
+					"description": ""
+				},
+				{
+					"key": "emailAddress",
+					"value": "example@example.com",
+					"type": "text",
+					"enabled": true,
+					"description": ""
+				},
+				{
+					"key": "comment",
+					"value": "I am a mighty comment.",
+					"type": "text",
+					"enabled": true,
+					"description": ""
+				}
+			],
+			"dataMode": "urlencoded",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1505466294886,
+			"name": "Create Comment",
+			"description": "",
+			"collectionId": "454f1295-3554-69a9-53bd-7b706ce723e5",
+			"responses": []
+		}
+	]
+}
