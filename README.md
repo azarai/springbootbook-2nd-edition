@@ -2,14 +2,24 @@
 
 Learn to build your first Spring Boot application with an actionable and hands-on approach.
 
-This is the sample application for the book [Spring Boot: How To Get Started and Build a Microservice](http://codeboje.de/spring-boot-book/ "Spring Boot book").
+This is the sample application for the pocket guide [Spring Boot: How To Get Started and Build a Microservice](http://codeboje.de/spring-boot-book/ "Spring Boot book") - second edition.
 
-The book is available on [Amazon](http://amzn.to/2r9UfVa "spring boot microservice book") and also in mobi, ePub and PDF with free lifetime updates directly on [my site](http://codeboje.de/spring-boot-book/ "the Spring Boot book home").
+The pocket guide is available on [my site](http://codeboje.de/spring-boot-book/ "the Spring Boot book home").
 
+# Parts
 
-# Running the project
+1. _spring-core-exercise_ contains the sample application for the Spring Core Beginners chapter
+2. _spring-boot-microservice_ contains the sample microservice we build
+
+# Running the Microservice
+
+The microservice is using a Maven Multimodule setup. To build it completely, follow these steps.
 
 After cloning the project run
+
+```bash
+cd spring-boot-microservice
+```
 
 ```bash
 mvn clean install
