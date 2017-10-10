@@ -14,7 +14,7 @@ public class SimpleSpamDetector implements SpamDetector {
 
 	private List<String> spamWords = new ArrayList<String>();
 
-	public SimpleSpamDetector(@Value("${spamfile}") String filename) throws IOException {
+	public SimpleSpamDetector(@Value("${sbb.spamwords.filename}") String filename) throws IOException {
 		spamWords = Files.readAllLines(Paths.get(filename));
 	}
 
