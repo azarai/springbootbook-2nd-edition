@@ -3,29 +3,17 @@ package de.codeboje.springbootbook.model;
 import java.io.Serializable;
 import java.time.Instant;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Index;
-import javax.persistence.Table;
-import javax.persistence.Version;
-
 import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.annotation.Version;
+import org.springframework.data.mongodb.core.mapping.Document;
 
-@Entity
-@Table(name = "comments_model", 
-	   indexes = {
-			   @Index(name = "idx_pageId", 
-					  columnList = "pageId"
-					 ) 
-		}
-)
+@Document
 public class Comment implements Serializable {
 
 	private static final long serialVersionUID = 8926987149780391093L;
 
 	@Id
-	@Column(length = 36)
 	private String id;
 
 	@Version
@@ -35,17 +23,15 @@ public class Comment implements Serializable {
 
 	private Instant creationDate;
 
-	@Column(length = 32)
 	private String pageId;
 
-	@Column(length = 32)
 	private String username;
 
-	@Column(length = 32)
 	private String emailAddress;
 
-	@Column
 	private boolean spam;
+	
+	private String comment;
 
 	public boolean isSpam() {
 		return spam;
@@ -63,8 +49,7 @@ public class Comment implements Serializable {
 		this.emailAddress = emailAddress;
 	}
 
-	@Column(columnDefinition = "TEXT")
-	private String comment;
+	
 
 	public boolean equals(Object o) {
 		if (this == o) {
