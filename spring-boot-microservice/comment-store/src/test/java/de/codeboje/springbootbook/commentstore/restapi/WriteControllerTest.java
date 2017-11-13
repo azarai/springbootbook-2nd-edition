@@ -45,7 +45,7 @@ public class WriteControllerTest {
                         .param("pageId", model.getPageId())
                         .param("emailAddress", model.getEmailAddress())
                         .param("username", model.getUsername()))
-                    .andExpect(status().is(200)).andReturn();
+                    .andExpect(status().is(201)).andReturn();
         
         String id = result.getResponse().getContentAsString();
         Comment dbModel = service.get(id);
@@ -81,7 +81,7 @@ public class WriteControllerTest {
 		model.setComment("I am the comment");
         String id = service.put(model);
         
-        this.mvc.perform(delete("/" + id)).andExpect(status().isOk());
+        this.mvc.perform(delete("/comment/" + id)).andExpect(status().isOk());
         
         assertNull(service.get(model.getId()));        
     }
