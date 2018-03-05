@@ -13,12 +13,14 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import java.time.Instant;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
 
+import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.actuate.metrics.CounterService;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
@@ -28,6 +30,13 @@ import org.springframework.test.web.servlet.MockMvc;
 import de.codeboje.springbootbook.commentstore.service.CommentService;
 import de.codeboje.springbootbook.model.Comment;
 import de.codeboje.springbootbook.spamdetection.SpamDetector;
+import io.micrometer.core.instrument.Counter;
+import io.micrometer.core.instrument.Meter.Id;
+import io.micrometer.core.instrument.Meter.Type;
+import io.micrometer.core.instrument.MeterRegistry;
+import io.micrometer.core.instrument.Tag;
+import io.micrometer.core.instrument.Tags;
+import io.micrometer.core.instrument.noop.NoopCounter;
 
 
 /**
@@ -37,16 +46,24 @@ import de.codeboje.springbootbook.spamdetection.SpamDetector;
 @RunWith(SpringRunner.class)
 @WebMvcTest(ReadController.class)
 @AutoConfigureMockMvc
-@MockBean({SpamDetector.class, CounterService.class})
+@MockBean({SpamDetector.class})
 public class ReadControllerTest {
 
 	@MockBean
 	private CommentService commentService;
+	
+	@MockBean
+	private MeterRegistry meterRegistry;
 
 	@Autowired
 	private MockMvc mvc;
 
 	private DateTimeFormatter DTF = DateTimeFormatter.ISO_INSTANT;
+	
+	@Before
+	public void setup() {
+		when(meterRegistry.counter(anyString())).thenReturn(new NoopCounter(new Id("dummy", Collections.emptyList(), null, null, Type.COUNTER)));
+	}
 
 	@Test
 	public void testGetComments() throws Exception {
