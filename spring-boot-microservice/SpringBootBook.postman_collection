@@ -1,232 +1,259 @@
 {
-	"id": "454f1295-3554-69a9-53bd-7b706ce723e5",
-	"name": "SpringBootBook",
-	"description": "",
-	"order": [
-		"ed153418-f99c-8d79-4f7b-1ca5946f889c",
-		"88f17e49-feab-5208-241c-38cb7af241a0",
-		"b8e638bd-f84d-5146-07d4-3a28c8c4b218",
-		"b3853a18-bcd3-ed26-8eb9-3c6fcf3031e3",
-		"b852df8f-29d8-0434-42fa-6b327414a537",
-		"e479db32-3e95-ec37-02d9-d4deaa1cb98d"
-	],
-	"folders": [],
-	"timestamp": 1484082186701,
-	"owner": 0,
-	"public": false,
-	"hasRequests": true,
-	"requests": [
+	"info": {
+		"name": "SpringBootBook",
+		"_postman_id": "454f1295-3554-69a9-53bd-7b706ce723e5",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
 		{
-			"id": "88f17e49-feab-5208-241c-38cb7af241a0",
-			"headers": "Authorization: Basic YWRtaW46bXlwYXNzd29yZA==\n",
-			"headerData": [
-				{
-					"key": "Authorization",
-					"value": "Basic YWRtaW46bXlwYXNzd29yZA==",
-					"description": "",
-					"enabled": true
-				}
-			],
-			"url": "http://localhost:8080/comments/product4711",
-			"queryParams": [],
-			"preRequestScript": null,
-			"pathVariables": {},
-			"pathVariableData": [],
-			"method": "GET",
-			"data": null,
-			"dataMode": "params",
-			"tests": null,
-			"currentHelper": "normal",
-			"helperAttributes": {},
-			"time": 1505466357951,
-			"name": "Get Comments for Page",
-			"description": "",
-			"collectionId": "454f1295-3554-69a9-53bd-7b706ce723e5",
-			"responses": []
-		},
-		{
-			"id": "b3853a18-bcd3-ed26-8eb9-3c6fcf3031e3",
-			"headers": "Authorization: Basic YWRtaW46bXlwYXNzd29yZA==\n",
-			"headerData": [
-				{
-					"key": "Authorization",
-					"value": "Basic YWRtaW46bXlwYXNzd29yZA==",
-					"description": "",
-					"enabled": true
-				}
-			],
-			"url": "http://localhost:8080/comment/c3c5899e-ff63-4f78-9dcb-563dab135d36",
-			"queryParams": [],
-			"preRequestScript": null,
-			"pathVariables": {},
-			"pathVariableData": [],
-			"method": "DELETE",
-			"data": null,
-			"dataMode": "params",
-			"tests": null,
-			"currentHelper": "normal",
-			"helperAttributes": {},
-			"time": 1505466453016,
-			"name": "Delete Comment",
-			"description": "",
-			"collectionId": "454f1295-3554-69a9-53bd-7b706ce723e5",
-			"responses": []
-		},
-		{
-			"id": "b852df8f-29d8-0434-42fa-6b327414a537",
-			"headers": "Authorization: Basic YWRtaW46bXlwYXNzd29yZA==\n",
-			"headerData": [
-				{
-					"key": "Authorization",
-					"value": "Basic YWRtaW46bXlwYXNzd29yZA==",
-					"description": "",
-					"enabled": true
-				}
-			],
-			"url": "http://localhost:8080/application/loggers",
-			"queryParams": [],
-			"preRequestScript": null,
-			"pathVariables": {},
-			"pathVariableData": [],
-			"method": "GET",
-			"data": null,
-			"dataMode": "params",
-			"tests": null,
-			"currentHelper": "normal",
-			"helperAttributes": {},
-			"time": 1505466684806,
-			"name": "Show Loggers",
-			"description": "",
-			"collectionId": "454f1295-3554-69a9-53bd-7b706ce723e5",
-			"responses": []
-		},
-		{
-			"id": "b8e638bd-f84d-5146-07d4-3a28c8c4b218",
-			"headers": "Authorization: Basic YWRtaW46bXlwYXNzd29yZA==\n",
-			"headerData": [
-				{
-					"key": "Authorization",
-					"value": "Basic YWRtaW46bXlwYXNzd29yZA==",
-					"description": "",
-					"enabled": true
-				}
-			],
-			"url": "http://localhost:8080/comments/product4711/spam",
-			"queryParams": [],
-			"preRequestScript": null,
-			"pathVariables": {},
-			"pathVariableData": [],
-			"method": "GET",
-			"data": null,
-			"dataMode": "params",
-			"version": 2,
-			"tests": null,
-			"currentHelper": "normal",
-			"helperAttributes": {},
-			"time": 1505466439639,
-			"name": "Get Spam Comments for Page",
-			"description": "",
-			"collectionId": "454f1295-3554-69a9-53bd-7b706ce723e5",
-			"responses": []
-		},
-		{
-			"id": "e479db32-3e95-ec37-02d9-d4deaa1cb98d",
-			"headers": "Authorization: Basic YWRtaW46bXlwYXNzd29yZA==\nContent-Type: application/json\n",
-			"headerData": [
-				{
-					"key": "Authorization",
-					"value": "Basic YWRtaW46bXlwYXNzd29yZA==",
-					"description": "",
-					"enabled": true
-				},
-				{
-					"key": "Content-Type",
-					"value": "application/json",
-					"description": "",
-					"enabled": true
-				}
-			],
-			"url": "http://localhost:8080/application/loggers/ROOT",
-			"queryParams": [],
-			"preRequestScript": null,
-			"pathVariables": {},
-			"pathVariableData": [],
-			"method": "POST",
-			"data": [],
-			"dataMode": "raw",
-			"version": 2,
-			"tests": null,
-			"currentHelper": "normal",
-			"helperAttributes": {},
-			"time": 1505466703665,
-			"name": "Change Loglevel",
-			"description": "",
-			"collectionId": "454f1295-3554-69a9-53bd-7b706ce723e5",
-			"responses": [],
-			"rawModeData": "{\n    \"configuredLevel\": \"DEBUG\"\n}"
-		},
-		{
-			"id": "ed153418-f99c-8d79-4f7b-1ca5946f889c",
-			"headers": "Content-Type: application/x-www-form-urlencoded\nAuthorization: Basic YWRtaW46bXlwYXNzd29yZA==\n",
-			"headerData": [
-				{
-					"key": "Content-Type",
-					"value": "application/x-www-form-urlencoded",
-					"description": "",
-					"enabled": true
-				},
-				{
-					"key": "Authorization",
-					"value": "Basic YWRtaW46bXlwYXNzd29yZA==",
-					"description": "",
-					"enabled": true
-				}
-			],
-			"url": "http://localhost:8080/comments",
-			"queryParams": [],
-			"preRequestScript": null,
-			"pathVariables": {},
-			"pathVariableData": [],
-			"method": "POST",
-			"data": [
-				{
-					"key": "pageId",
-					"value": "product4711",
-					"type": "text",
-					"enabled": true,
-					"description": ""
-				},
-				{
-					"key": "username",
-					"value": "Stiefel",
-					"type": "text",
-					"enabled": true,
-					"description": ""
-				},
-				{
-					"key": "emailAddress",
-					"value": "example@example.com",
-					"type": "text",
-					"enabled": true,
-					"description": ""
-				},
-				{
-					"key": "comment",
-					"value": "I am a mighty comment.",
-					"type": "text",
-					"enabled": true,
-					"description": ""
-				}
-			],
-			"dataMode": "urlencoded",
-			"tests": null,
-			"currentHelper": "normal",
-			"helperAttributes": {},
-			"time": 1505466294886,
 			"name": "Create Comment",
-			"description": "",
-			"collectionId": "454f1295-3554-69a9-53bd-7b706ce723e5",
-			"responses": []
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic YWRtaW46bXlwYXNzd29yZA=="
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "pageId",
+							"value": "product4711",
+							"type": "text",
+							"description": ""
+						},
+						{
+							"key": "username",
+							"value": "Stiefel",
+							"type": "text",
+							"description": ""
+						},
+						{
+							"key": "emailAddress",
+							"value": "example@example.com",
+							"type": "text",
+							"description": ""
+						},
+						{
+							"key": "comment",
+							"value": "I am a mighty comment.",
+							"type": "text",
+							"description": ""
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/comments",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"comments"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get Comments for Page",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic YWRtaW46bXlwYXNzd29yZA=="
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8080/comments/product4711",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"comments",
+						"product4711"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get Spam Comments for Page",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic YWRtaW46bXlwYXNzd29yZA=="
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8080/comments/product4711/spam",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"comments",
+						"product4711",
+						"spam"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Comment",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic YWRtaW46bXlwYXNzd29yZA=="
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8080/comment/c3c5899e-ff63-4f78-9dcb-563dab135d36",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"comment",
+						"c3c5899e-ff63-4f78-9dcb-563dab135d36"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Show Loggers",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic YWRtaW46bXlwYXNzd29yZA=="
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8080/actuator/loggers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"actuator",
+						"loggers"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Change Loglevel",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic YWRtaW46bXlwYXNzd29yZA=="
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"configuredLevel\": \"DEBUG\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/actuator/loggers/ROOT",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"actuator",
+						"loggers",
+						"ROOT"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Show Health Check",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "mypassword",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						},
+						{
+							"key": "saveHelperData",
+							"value": false,
+							"type": "boolean"
+						},
+						{
+							"key": "showPassword",
+							"value": false,
+							"type": "boolean"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8080/actuator/health",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"actuator",
+						"health"
+					]
+				},
+				"description": ""
+			},
+			"response": []
 		}
 	]
 }

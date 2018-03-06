@@ -35,7 +35,7 @@ public class ReadController {
     @RequestMapping(value = "/comments/{id}")
     public List<Comment> getComments(@PathVariable(value = "id") String pageId) throws IOException {
         LOGGER.info("get comments for pageId {}", pageId);
-        meterRegistry.counter("commentstore.list_comments").increment();;
+        meterRegistry.counter("commentstore.list_comments").increment();
         List<Comment> r = service.list(pageId);
         if (r.isEmpty()) {
             LOGGER.info("get comments for pageId {} - not found", pageId);

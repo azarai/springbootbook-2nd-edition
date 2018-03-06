@@ -13,7 +13,6 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import java.time.Instant;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 
@@ -30,12 +29,9 @@ import org.springframework.test.web.servlet.MockMvc;
 import de.codeboje.springbootbook.commentstore.service.CommentService;
 import de.codeboje.springbootbook.model.Comment;
 import de.codeboje.springbootbook.spamdetection.SpamDetector;
-import io.micrometer.core.instrument.Counter;
 import io.micrometer.core.instrument.Meter.Id;
 import io.micrometer.core.instrument.Meter.Type;
 import io.micrometer.core.instrument.MeterRegistry;
-import io.micrometer.core.instrument.Tag;
-import io.micrometer.core.instrument.Tags;
 import io.micrometer.core.instrument.noop.NoopCounter;
 
 

@@ -9,7 +9,8 @@ public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter{
 
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
-		http.csrf().disable().httpBasic();
+		http.csrf().disable() //disable csrf as we do not need it in the sample
+		.httpBasic(); //allow basic auth
 	}
 
 }
