@@ -8,7 +8,6 @@ import java.util.Locale;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.actuate.metrics.CounterService;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
@@ -20,6 +19,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import de.codeboje.springbootbook.commentstore.service.CommentService;
 import de.codeboje.springbootbook.model.Comment;
+import io.micrometer.core.instrument.MeterRegistry;
 
 @RestController
 public class ReadController {
@@ -30,12 +30,12 @@ public class ReadController {
     private CommentService service;
 
     @Autowired
-    private CounterService counterService;
+    private MeterRegistry meterRegistry;
 
     @RequestMapping(value = "/comments/{id}")
     public List<Comment> getComments(@PathVariable(value = "id") String pageId) throws IOException {
         LOGGER.info("get comments for pageId {}", pageId);
-        counterService.increment("commentstore.list_comments");
+        meterRegistry.counter("commentstore.list_comments").increment();;
         List<Comment> r = service.list(pageId);
         if (r.isEmpty()) {
             LOGGER.info("get comments for pageId {} - not found", pageId);
@@ -54,7 +54,7 @@ public class ReadController {
     @RequestMapping(value = "/comments/{id}/spam")
     public List<Comment> getSpamComments(@PathVariable(value = "id") String pageId) throws IOException {
         LOGGER.info("get spam comments for pageId {}", pageId);
-        counterService.increment("commentstore.list_comments");
+        meterRegistry.counter("commentstore.list_comments").increment();;
         List<Comment> r = service.listSpamComments(pageId);
         LOGGER.info("get spam comments for pageId {} - done", pageId);
         return r;
